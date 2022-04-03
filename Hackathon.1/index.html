@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en, he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Keep Your Secrets</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>KEEP YOUR SECRETS SECRET!</h1>
+        <h2>- application for hiding your notes in plain sight</h2>
+    </div>
+    <div class="intro">
+        <p>The time of magic ink is over! With this handy application you can keep your private notes safe from curious
+            eyes - and when you need them yourself, unscramble them with a few clicks!</p>
+        <p>Just write your important data in the text box, and choose how you want to change the text. <br><span>Please,
+                use only letters and numbers, no other punctuation marks!</span>
+        </p>
+    </div>
+    </div>
+    <div class="flex-container">
+        <div class="origText">
+            <form action="/action_page.php">
+                <label class="textBox" for="origText">Please write here:</label><br>
+                <textarea id="origText" name="origText" maxlength="1000" wrap="hard" rows="10" cols="30">
+        </textarea>
+            </form>
+        </div>
+        <div class="newText">
+            <form action="/action_page.php">
+                <label class="textBox" for="newText">Your secret text:</label><br>
+                <textarea id="newText" name="newText" rows="" cols="" disabled>
+            </textarea>
+            </form>
+        </div>
+    </div>
+    <div class="textChange">
+        <p>Please select how you want to change your text:</p>
+<ul class="chooseAction">
+        <li><input type="radio" id="engToHeb" oninput="changeEngToHeb()" name="how_to_change" value="engToHeb">
+        <label for="engToHeb">To Hebrew Letters</label><br></li>
+        <li><input type="radio" id="engToMixedEng" oninput="changeEngToMixedEng()" name="how_to_change" value="engToMixedEng">
+        <label for="engToMixedEng">To English with Letters Mixed</label><br></li>
+        <li><input type="radio" id="mixEngToHeb" oninput="changeMixedEngToHeb()" name="how_to_change" value="mixEngToHeb">
+        <label for="mixEngToHeb">DoubleStrong - first mix the English text, then change letters to Hebrew!</label><br></li>
+      
+        <li><input type="radio" id="hebToEng" oninput="returnHebToEng()" name="how_to_change" value="hebToEng">
+        <label for="hebToEng">From Hebrew back to English letters</label><br></li>
+        <li><input type="radio" id="mixEngToEng" oninput="returnMixedEngToEng()" name="how_to_change" value="mixEngToEng">
+        <label for="mixEngToEng">From Mixed English Words to Normal English</label><br></li>
+        <li><input type="radio" id="hebToMixEng" oninput="returnMixedHebToHeb()" name="how_to_change" value="hebToMixEng">
+        <label for="hebToMixEng">From Mixed English Words in Hebrew to Normal English</label><br></li><br>
+    </ul>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
